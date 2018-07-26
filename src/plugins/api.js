@@ -46,7 +46,7 @@ class MakeApi {
       Object.defineProperty(this.api, `${namespace}${sep}${name}`, {
         value (outerParams, outerOptions) {
           // 请求参数自动截取
-          // 请求参数不穿则发送默认配置参数
+          // 请求参数不传则发送默认配置参数
           let _data = _isEmpty(outerParams) ? params : _pick(_assign({}, params, outerParams), Object.keys(params))
           return axios(_normoalize(_assign({
             url,
