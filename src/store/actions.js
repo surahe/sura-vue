@@ -1,10 +1,10 @@
 import api from '@/plugins/api'
-import consts from '@/plugins/const'
+import * as types from './mutation-types'
+
 export default {
   getUserInfo ({ commit }) {
-    commit('SET_FRUIT', consts['OTHER/FRUIT'])
     api['user/info']().then(resData => {
-      commit('SET_USER_INFO', resData)
+      commit(types.SET_USER_INFO, resData)
     })
   }
 }

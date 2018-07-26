@@ -5,8 +5,8 @@ import router from '@/plugins/router'
 import inject from '@/plugins/inject'
 import store from '@/plugins/store'
 
-// import 'Components'// 全局组件注册
-// import 'Directives' // 指令
+// import '@/components'// 全局组件注册
+// import '@/directives' // 指令
 
 // 引入组件库及其组件库样式
 

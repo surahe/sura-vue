@@ -29,7 +29,7 @@ export const VUEX_DEFAULT_CONFIG = {
 export const API_DEFAULT_CONFIG = {
   mockBaseURL: '',
   mock: true,
-  debug: false,
+  debug: true,
   sep: '/'
 }
 

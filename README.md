@@ -24,7 +24,6 @@ src
 config
 ├── index.js             // 全局配置/开关
 ├── interceptors        // 拦截器
-    ├── index.js        // 入口文件
     ├── axios.js        // 请求/响应拦截
     ├── router.js       // 路由拦截
     └── ...
@@ -37,7 +36,6 @@ config
 plugins
 ├── api.js              // 服务层 api 插件
 ├── axios.js            // 请求实例插件
-├── const.js            // 服务层 const 插件
 ├── store.js            // vuex 实例插件
 ├── inject.js           // 注入 Vue 原型插件
 └── router.js           // 路由实例插件
@@ -50,11 +48,6 @@ service
     ├── index.js             // 入口文件
     ├── order.js             // 订单相关接口配置
     └── ...
-├── const                   
-    ├── index.js             // 入口文件
-    ├── order.js             // 订单常量接口配置
-    └── ...
-├── store                    // vuex 状态管理
 ├── expands                  // 拓展
     ├── monitor.js           // 监控
     ├── beacon.js            // 打点

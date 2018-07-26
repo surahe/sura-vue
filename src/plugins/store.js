@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { VUEX_DEFAULT_CONFIG } from '@/config'
-import commonStore from '@/service/store/common'
+import commonStore from '@/store'
 
 Vue.use(Vuex)
 
