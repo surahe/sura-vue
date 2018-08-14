@@ -15,15 +15,11 @@ class MakeApi {
   apiBuilder ({
     sep = '|',
     config = {},
-    mock = false,
-    debug = false,
-    mockBaseURL = ''
+    debug = false
   }) {
     Object.keys(config).map(namespace => {
       this._apiSingleBuilder({
         namespace,
-        mock,
-        mockBaseURL,
         sep,
         debug,
         config: config[namespace]
@@ -34,14 +30,10 @@ class MakeApi {
     namespace,
     sep = '|',
     config = {},
-    mock = false,
-    debug = false,
-    mockBaseURL = ''
+    debug = false
   }) {
     config.forEach(api => {
-      const { name, desc, params, method, path, mockPath } = api
-      let url = mock ? mockPath : path
-      let baseURL = mock && mockBaseURL
+      const { name, desc, params, method, path } = api
 
       Object.defineProperty(this.api, `${namespace}${sep}${name}`, {
         value (outerParams, outerOptions) {
@@ -49,9 +41,8 @@ class MakeApi {
           // 请求参数不传则发送默认配置参数
           let _data = _isEmpty(outerParams) ? params : _pick(_assign({}, params, outerParams), Object.keys(params))
           return axios(_normoalize(_assign({
-            url,
+            path,
             desc,
-            baseURL,
             method
           }, outerOptions), _data))
         }

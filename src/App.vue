@@ -33,13 +33,13 @@ export default {
       this.$ajax.get('/suer', {id: 1}).then(res => {
         console.log(res)
       })
-      // this.getUserInfo({
-      //   list: 1
-      // }).then(data => {
-      //   console.log(data)
-      // }).catch(function (error) {
-      //   console.log(error)
-      // })
+      this.getUserInfo({
+        list: 1
+      }).then(data => {
+        console.log(data)
+      }).catch(function (error) {
+        console.log(error)
+      })
     }
   },
   created () {

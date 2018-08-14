@@ -1,9 +1,9 @@
 import Vue from 'vue'
 
 // 引入插件
-import router from '@/plugins/router'
+import router from '@/routes'
 import inject from '@/plugins/inject'
-import store from '@/plugins/store'
+import store from '@/store'
 
 // import '@/components'// 全局组件注册
 // import '@/directives' // 指令

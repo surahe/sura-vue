@@ -1,4 +1,3 @@
-import { CONSOLE_REQUEST_ENABLE } from '../index.js'
 import { Message } from 'element-ui'
 
 /**
@@ -6,7 +5,6 @@ import { Message } from 'element-ui'
  * @param {*} requestObj
  */
 export function requestSuccessFunc (requestObj) {
-  CONSOLE_REQUEST_ENABLE && console.info('requestInterceptorFunc', `url: ${requestObj.url}`, requestObj)
   // 可以处理权限，请求发送监控，loading等
 
   return requestObj

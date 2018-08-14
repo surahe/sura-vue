@@ -3,7 +3,6 @@ export default [{
   method: 'GET',
   desc: '测试接口1',
   path: '/api/info',
-  mockPath: '/api/info',
   params: {
     a: 1,
     b: 2
@@ -13,7 +12,6 @@ export default [{
   method: 'GET',
   desc: '用户信息',
   path: '/api/info',
-  mockPath: '/api/info',
   params: {
 
   }
